@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy Monster</title>
+    <link rel="shortcut icon" type="x-icon" href="images/icons.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="swiper.css">  
+    <script src="swiper.js"></script> 
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <div>
+                <img src="images/Genger.png" alt="">
+            </div>
+            <div class="title_text">
+                <h3>Crazy Monster - Pokemon game</h3>
+                <p class="title_text_center">Compete with your friends in World of Pokémon</p>
+                <div class="title_text_foot">
+                    <!-- <div><img src="images/1.png" alt=""></div>
+                    <div class="title_text_foot_content">
+                        <span>Installation Tutorial</span>
+                        <img src="images/2.png" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <hr class="first_hr"/>
+
+        <div>
+            <h3 class="carousel_title">Preview</h3>
+            <div>
+                <div class="swiper-container">  
+                    <div class="swiper-wrapper">  
+                        <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>  
+                        <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>  
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="install_box">
+            <button class="install_box_btn">Install</button>
+            <p class="install_box_content">
+                <img src="images/3.png" alt="">
+                <span class="install_box_text">How to solve the problem of "Untrusted Enterprise Developer on iOS"</span>
+            </p>
+        </div>
+
+        <hr/>
+        <div>
+            <p>Please uninstall the previous version before playing. If you run into any problems let us know</p>
+            <p>
+                
+                <span style="color:red"><b>Contact us:</b><a href="https://discord.gg/JCvnNX5">Official Discord Server</a></span>
+            </p>
+            <p>
+                <span style="color:#015826"><b>Android 32bit</b></span>
+                <span style="color:red"><a href="https://gt-mr-sharing.s3.ap-southeast-1.amazonaws.com/CM/CrazyMonster202532.apk">Download</a></span>
+            </p>
+        </div>
+
+        <hr/>
+
+
+
+        <div>
+            <h3>Game Introduction</h3>
+            <div class="introduce_title">
+                <!-- <p>Version 9.4.0.2</p>-->
+            </div>
+            <p style="text-indent: 32px;">《Crazy Monster》is a Pokémon-themed pokemon raising RPG mobile game that perfectly recreates classic scenes. All Pokémon are faithfully restored, waiting for you to collect, cultivate, and build your strongest team! The game faithfully reproduces Pokémon evolution, Pokédex collection, challenge sparring, and League Champion competition, and adds new features such as Pokémon equipment and breakthrough, allowing you to relive the classic handheld experience while enjoying more gameplay fun! Pokémon from multiple generations gather in the Pokémon world, with rare legendary Pokémon appearing. Everyone can freely explore and capture! Exciting PVP battle mode ignites the hot arena, achieving the title of the strongest trainer master! Transcending time and space, embark on a Pokémon adventure journey, with continuous surprises and easter eggs, taking you back to the nostalgic Pokémon childhood, and returning you to a pocket dream!</p>
+        </div>
+    </div>
+
+    <script> 
+        console.log("------Mixed server(jailbreak)-----------");
+    	var u = navigator.userAgent;
+    	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android terminal
+    	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios terminal
+    	var link1 = 'https://gt-mr-sharing.s3.ap-southeast-1.amazonaws.com/CM/CrazyMonster202564.apk'
+
+    	if(isiOS) {
+    	    link1 = "itms-services://?action=download-manifest&url=https://d3ggu5tgyq6kcb.cloudfront.net/PKM/20250314/mianfest.plist"
+    	}
+        var mySwiper = new Swiper('.swiper-container', {  
+            autoplay:true,//equivalent to the following settings  
+            autoplay: {  
+                delay: 1000,  
+                stopOnLastSlide: false,  
+                disableOnInteraction: false,  
+            },  
+        });
+
+        let btn = document.querySelector('.install_box_content').onclick = function() {
+            window.location.href = "tips.html";
+        }
+        let install = document.querySelector('.install_box_btn').onclick = function() {
+            window.location.href = link1;
+        }
+    </script>
+</body>
+</html>
